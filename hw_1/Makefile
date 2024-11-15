@@ -5,8 +5,6 @@ LDFLAGS=-lopenblas
 SRC_DIR=relu_module/src
 MODULE_DIR=relu_module/module
 
-all: linalg test
-
 relu: $(MODULE_DIR)/py_relu_module.o $(SRC_DIR)/relu_bind.o
 	$(CXX) $^ -o $(MODULE_DIR)/relu_binding`python3-config --extension-suffix` $(PY_LDFLAGS) $(CXXFLAGS)
 
