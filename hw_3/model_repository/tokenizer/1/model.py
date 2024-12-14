@@ -10,7 +10,8 @@ class TritonPythonModel:
         """
         model_path = "/assets/tokenizer"
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
-        self.max_length = 128  # Maximum sequence length
+        self.max_length = 128
+        self.max_batch_size = 8
 
     def execute(self, requests):
         """
@@ -18,13 +19,10 @@ class TritonPythonModel:
         """
         responses = []
         for request in requests:
-            # Extract input text
             input_texts = pb_utils.get_input_tensor_by_name(request, "TEXT").as_numpy()
             
-            # Input is already a numpy array of byte strings
             decoded_texts = [text.decode("utf-8") for text in input_texts.flatten()]
 
-            # Tokenize the text
             tokenized = self.tokenizer(
                 decoded_texts,
                 max_length=self.max_length,
@@ -33,22 +31,13 @@ class TritonPythonModel:
                 return_tensors="np"
             )
 
-            # Prepare outputs
             input_ids = tokenized["input_ids"].astype(np.int64)
             attention_mask = tokenized["attention_mask"].astype(np.int64)
 
-            # Create Triton output tensors
             input_ids_tensor = pb_utils.Tensor("INPUT_IDS", input_ids)
             attention_mask_tensor = pb_utils.Tensor("ATTENTION_MASK", attention_mask)
 
-            # Add to responses
             responses.append(pb_utils.InferenceResponse(output_tensors=[input_ids_tensor, attention_mask_tensor]))
 
         return responses
-
-    def finalize(self):
-        """
-        Finalize and clean up resources if necessary.
-        """
-        pass
 
