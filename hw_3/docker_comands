@@ -1,0 +1,3 @@
+docker run --gpus all -it --rm -v ./al3xs0n:/mnt nvcr.io/nvidia/tensorrt:24.11-py3
+
+docker run --gpus=1 --rm --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864 -p8100:8000 -p8101:8001 -p8102:8002 -v/home/ubuntu/al3xs0n/model_repository_1:/models triton_with_transformers tritonserver --model-repository=/models

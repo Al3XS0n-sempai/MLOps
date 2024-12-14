@@ -1,0 +1,118 @@
+----------------------------------------------------------------------------------------------------
+FLOPs per layer:
+----------------------------------------------------------------------------------------------------
+|                                      Layer : 18515328FLOPs                                       |
+|                                   Layer embeddings: 12480FLOPs                                   |
+|                             Layer embeddings.word_embeddings: 0FLOPs                             |
+|                           Layer embeddings.position_embeddings: 0FLOPs                           |
+|                          Layer embeddings.token_type_embeddings: 0FLOPs                          |
+|                              Layer embeddings.LayerNorm: 12480FLOPs                              |
+|                                 Layer embeddings.dropout: 0FLOPs                                 |
+|                                   Layer encoder: 18405504FLOPs                                   |
+|                                Layer encoder.layer: 18405504FLOPs                                |
+|                               Layer encoder.layer.0: 6135168FLOPs                                |
+|                          Layer encoder.layer.0.attention: 3127488FLOPs                           |
+|                        Layer encoder.layer.0.attention.self: 2336256FLOPs                        |
+|                     Layer encoder.layer.0.attention.self.query: 778752FLOPs                      |
+|                      Layer encoder.layer.0.attention.self.key: 778752FLOPs                       |
+|                     Layer encoder.layer.0.attention.self.value: 778752FLOPs                      |
+|                       Layer encoder.layer.0.attention.self.dropout: 0FLOPs                       |
+|                       Layer encoder.layer.0.attention.output: 791232FLOPs                        |
+|                    Layer encoder.layer.0.attention.output.dense: 778752FLOPs                     |
+|                   Layer encoder.layer.0.attention.output.LayerNorm: 12480FLOPs                   |
+|                      Layer encoder.layer.0.attention.output.dropout: 0FLOPs                      |
+|                         Layer encoder.layer.0.intermediate: 1497600FLOPs                         |
+|                      Layer encoder.layer.0.intermediate.dense: 1497600FLOPs                      |
+|                  Layer encoder.layer.0.intermediate.intermediate_act_fn: 0FLOPs                  |
+|                            Layer encoder.layer.0.output: 1510080FLOPs                            |
+|                         Layer encoder.layer.0.output.dense: 1497600FLOPs                         |
+|                        Layer encoder.layer.0.output.LayerNorm: 12480FLOPs                        |
+|                           Layer encoder.layer.0.output.dropout: 0FLOPs                           |
+|                               Layer encoder.layer.1: 6135168FLOPs                                |
+|                          Layer encoder.layer.1.attention: 3127488FLOPs                           |
+|                        Layer encoder.layer.1.attention.self: 2336256FLOPs                        |
+|                     Layer encoder.layer.1.attention.self.query: 778752FLOPs                      |
+|                      Layer encoder.layer.1.attention.self.key: 778752FLOPs                       |
+|                     Layer encoder.layer.1.attention.self.value: 778752FLOPs                      |
+|                       Layer encoder.layer.1.attention.self.dropout: 0FLOPs                       |
+|                       Layer encoder.layer.1.attention.output: 791232FLOPs                        |
+|                    Layer encoder.layer.1.attention.output.dense: 778752FLOPs                     |
+|                   Layer encoder.layer.1.attention.output.LayerNorm: 12480FLOPs                   |
+|                      Layer encoder.layer.1.attention.output.dropout: 0FLOPs                      |
+|                         Layer encoder.layer.1.intermediate: 1497600FLOPs                         |
+|                      Layer encoder.layer.1.intermediate.dense: 1497600FLOPs                      |
+|                  Layer encoder.layer.1.intermediate.intermediate_act_fn: 0FLOPs                  |
+|                            Layer encoder.layer.1.output: 1510080FLOPs                            |
+|                         Layer encoder.layer.1.output.dense: 1497600FLOPs                         |
+|                        Layer encoder.layer.1.output.LayerNorm: 12480FLOPs                        |
+|                           Layer encoder.layer.1.output.dropout: 0FLOPs                           |
+|                               Layer encoder.layer.2: 6135168FLOPs                                |
+|                          Layer encoder.layer.2.attention: 3127488FLOPs                           |
+|                        Layer encoder.layer.2.attention.self: 2336256FLOPs                        |
+|                     Layer encoder.layer.2.attention.self.query: 778752FLOPs                      |
+|                      Layer encoder.layer.2.attention.self.key: 778752FLOPs                       |
+|                     Layer encoder.layer.2.attention.self.value: 778752FLOPs                      |
+|                       Layer encoder.layer.2.attention.self.dropout: 0FLOPs                       |
+|                       Layer encoder.layer.2.attention.output: 791232FLOPs                        |
+|                    Layer encoder.layer.2.attention.output.dense: 778752FLOPs                     |
+|                   Layer encoder.layer.2.attention.output.LayerNorm: 12480FLOPs                   |
+|                      Layer encoder.layer.2.attention.output.dropout: 0FLOPs                      |
+|                         Layer encoder.layer.2.intermediate: 1497600FLOPs                         |
+|                      Layer encoder.layer.2.intermediate.dense: 1497600FLOPs                      |
+|                  Layer encoder.layer.2.intermediate.intermediate_act_fn: 0FLOPs                  |
+|                            Layer encoder.layer.2.output: 1510080FLOPs                            |
+|                         Layer encoder.layer.2.output.dense: 1497600FLOPs                         |
+|                        Layer encoder.layer.2.output.LayerNorm: 12480FLOPs                        |
+|                           Layer encoder.layer.2.output.dropout: 0FLOPs                           |
+|                                     Layer pooler: 97344FLOPs                                     |
+|                                  Layer pooler.dense: 97344FLOPs                                  |
+|                                 Layer pooler.activation: 0FLOPs                                  |
+----------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------
+Total FLOPs: 18515328
+----------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------
+Parameter count:
+ | name                                       | #elements or shape   |
+|:-------------------------------------------|:---------------------|
+| model                                      | 11.8M                |
+|  embeddings                                |  9.4M                |
+|   embeddings.word_embeddings               |   9.2M               |
+|    embeddings.word_embeddings.weight       |    (29564, 312)      |
+|   embeddings.position_embeddings           |   0.2M               |
+|    embeddings.position_embeddings.weight   |    (512, 312)        |
+|   embeddings.token_type_embeddings         |   0.6K               |
+|    embeddings.token_type_embeddings.weight |    (2, 312)          |
+|   embeddings.LayerNorm                     |   0.6K               |
+|    embeddings.LayerNorm.weight             |    (312,)            |
+|    embeddings.LayerNorm.bias               |    (312,)            |
+|  encoder                                   |  2.3M                |
+|   encoder.layer                            |   2.3M               |
+|    encoder.layer.0                         |    0.8M              |
+|    encoder.layer.1                         |    0.8M              |
+|    encoder.layer.2                         |    0.8M              |
+|  pooler                                    |  97.7K               |
+|   pooler.dense                             |   97.7K              |
+|    pooler.dense.weight                     |    (312, 312)        |
+|    pooler.dense.bias                       |    (312,)            |
+----------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------
+Compute-bound layers:
+['', 'embeddings', 'embeddings.LayerNorm', 'encoder', 'encoder.layer', 'encoder.layer.0', 'encoder.layer.0.attention', 'encoder.layer.0.attention.self', 'encoder.layer.0.attention.self.query', 'encoder.layer.0.attention.self.key', 'encoder.layer.0.attention.self.value', 'encoder.layer.0.attention.output', 'encoder.layer.0.attention.output.dense', 'encoder.layer.0.attention.output.LayerNorm', 'encoder.layer.0.intermediate', 'encoder.layer.0.intermediate.dense', 'encoder.layer.0.output', 'encoder.layer.0.output.dense', 'encoder.layer.0.output.LayerNorm', 'encoder.layer.1', 'encoder.layer.1.attention', 'encoder.layer.1.attention.self', 'encoder.layer.1.attention.self.query', 'encoder.layer.1.attention.self.key', 'encoder.layer.1.attention.self.value', 'encoder.layer.1.attention.output', 'encoder.layer.1.attention.output.dense', 'encoder.layer.1.attention.output.LayerNorm', 'encoder.layer.1.intermediate', 'encoder.layer.1.intermediate.dense', 'encoder.layer.1.output', 'encoder.layer.1.output.dense', 'encoder.layer.1.output.LayerNorm', 'encoder.layer.2', 'encoder.layer.2.attention', 'encoder.layer.2.attention.self', 'encoder.layer.2.attention.self.query', 'encoder.layer.2.attention.self.key', 'encoder.layer.2.attention.self.value', 'encoder.layer.2.attention.output', 'encoder.layer.2.attention.output.dense', 'encoder.layer.2.attention.output.LayerNorm', 'encoder.layer.2.intermediate', 'encoder.layer.2.intermediate.dense', 'encoder.layer.2.output', 'encoder.layer.2.output.dense', 'encoder.layer.2.output.LayerNorm', 'pooler', 'pooler.dense']
+----------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------
+Memory-bound layers:
+['embeddings.word_embeddings', 'embeddings.position_embeddings', 'embeddings.token_type_embeddings', 'embeddings.dropout', 'encoder.layer.0.attention.self.dropout', 'encoder.layer.0.attention.output.dropout', 'encoder.layer.0.intermediate.intermediate_act_fn', 'encoder.layer.0.output.dropout', 'encoder.layer.1.attention.self.dropout', 'encoder.layer.1.attention.output.dropout', 'encoder.layer.1.intermediate.intermediate_act_fn', 'encoder.layer.1.output.dropout', 'encoder.layer.2.attention.self.dropout', 'encoder.layer.2.attention.output.dropout', 'encoder.layer.2.intermediate.intermediate_act_fn', 'encoder.layer.2.output.dropout', 'pooler.activation']
+----------------------------------------------------------------------------------------------------
